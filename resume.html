@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Resume | Ahmad Rafi</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/premium-design.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 40px;
+        }
+
+        .resume-sidebar {
+            position: sticky;
+            top: 100px;
+            height: max-content;
+        }
+
+        .contact-info-list {
+            margin-top: 20px;
+        }
+
+        .contact-info-list li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .contact-info-list i {
+            color: var(--primary);
+            width: 20px;
+            text-align: center;
+        }
+
+        .resume-section {
+            margin-bottom: 50px;
+        }
+
+        .resume-section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--glass-border);
+            color: var(--text-primary);
+        }
+
+        .resume-item {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid rgba(255, 1, 79, 0.3);
+        }
+
+        .resume-item::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        .resume-item-title {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .resume-item-subtitle {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .resume-item-desc {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Skill Bars */
+        .skill-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .skill-bar-container {
+            width: 100%;
+        }
+
+        .skill-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .skill-track {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary) 0%, #ff6b6b 100%);
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+            animation: shimmer 2s infinite linear;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resume-sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar text-white" style="background: rgba(13, 15, 18, 0.9);">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">R<span class="text-primary-gradient">A</span>FI.</a>
+            </div>
+            <div class="desktop-menu">
+                <a href="index.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="section" style="padding-top: 150px; padding-bottom: 30px;">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Curriculum Vitae</span>
+                <h2 class="section-title">Professional <span class="text-primary-gradient">Resume</span></h2>
+            </div>
+        </div>
+    </section>
+    <section class="section" style="padding-top: 0;">
+        <div class="container resume-grid">
+            <div class="resume-sidebar" data-aos="fade-right">
+                <div class="glass-card" style="text-align: center; margin-bottom: 30px;">
+                    <div
+                        style="width: 150px; height: 150px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; border: 3px solid var(--primary); padding: 5px;">
+                        <img src="assets/images/slider/rafi_new.png" alt="Ahmad Rafi"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; background: var(--bg-dark);">
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Ahmad Rafi</h3>
+                    <p class="text-primary-gradient" style="font-weight: 600; margin-bottom: 20px;">AI/ML Engineer</p>
+
+                    <ul class="contact-info-list" style="text-align: left;">
+                        <li><i class="fas fa-envelope"></i> ahdrafi1486@gmail.com</li>
+                        <li><i class="fas fa-phone-alt"></i> (+966) 0552802056</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Al Ula, Al Madinah, Saudi Arabia</li>
+                    </ul>
+
+                    <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px;">
+                        <a href="https://www.linkedin.com/in/ahmadrafi07/" target="_blank" class="social-icon"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/ahd-rafi" target="_blank" class="social-icon"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+
+                    <a href="assets/images/cv/rofi_cov.pdf" class="btn btn-primary"
+                        style="width: 100%; margin-top: 30px;" target="_blank" download>
+                        Download PDF CV
+                    </a>
+                </div>
+            </div>
+            <div class="resume-main" data-aos="fade-left">
+                <div class="resume-section glass-card">
+                    <h3 class="resume-section-title"><i class="fas fa-briefcase"
+                            style="color: var(--primary); margin-right: 15px;"></i> Professional Experience</h3>
+
+                    <div class="resume-item">
+                        <h4 class="resume-item-title">Machine Learning Engineer</h4>
+                        <div class="resume-item-subtitle">Musanadah Facilities Management, Al Ula, Al Madinah - Saudi
+                            Arabia | Feb 2026 - Present
+                        </div>
+                        <p class="resume-item-desc">
+                            Driving the vision of intelligent enterprise operations. Architecting AI systems to optimize
+                            facility management and enable data-driven decision-making across regions.
+                        </p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h4 class="resume-item-title">AI/ML Engineer</h4>
+                        <div class="resume-item-subtitle">UniCourt India - Mangalore Infotech Solutions Pvt. Ltd. | Aug
+                            2025 - Feb 2026
+                        </div>
+                        <p class="resume-item-desc">
+                            Scaled expertise into LegalTech by building sophisticated LLM-based intelligent systems and
+                            managing production-level deployments on AWS (Bedrock, SageMaker) for vast legal datasets.
+                        </p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h4 class="resume-item-title">Data Scientist</h4>
+                        <div class="resume-item-subtitle">Centre for Integrative Omics Data Science | Feb 2023 - Aug
+                            2025
+                        </div>
+                        <p class="resume-item-desc">
+                            Engineered robust Gen AI and RAG pipelines for critical healthcare applications. Developed
+                            complex predictive models, established CI/CD practices for seamless deployment, and
+                            published international journal papers.
+                        </p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h4 class="resume-item-title">Machine Learning Engineer</h4>
+                        <div class="resume-item-subtitle">Freelance | May 2021 - Feb 2023
+                        </div>
+                        <p class="resume-item-desc">
+                            Applied ML models to practical problems and designed end-to-end ML pipelines. Gained
+                            hands-on project experience to solve diverse client challenges.
+                        </p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h4 class="resume-item-title">Machine Learning Intern</h4>
+                        <div class="resume-item-subtitle">Knowledge Solutions India (Aff. Microsoft) | Feb 2021 - Apr
+                            2021</div>
+                        <p class="resume-item-desc">
+                            Actively built strong foundational concepts by gaining practical experience in Python
+                            programming, exploratory data analysis, and basic machine learning model evaluation.
+                        </p>
+                    </div>
+                </div>
+                <div class="resume-section glass-card">
+                    <h3 class="resume-section-title"><i class="fas fa-graduation-cap"
+                            style="color: var(--primary); margin-right: 15px;"></i> Education</h3>
+
+                    <div class="resume-item">
+                        <h4 class="resume-item-title">Bachelor of Engineering</h4>
+                        <div class="resume-item-subtitle">Visvesvaraya Technological University | 2019 - 2023</div>
+                        <p class="resume-item-desc">
+                            Graduated with a CGPA of 7.85 in Computer Science and Engineering. Built foundational
+                            knowledge in algorithms, software engineering, and data structures.
+                        </p>
+                    </div>
+                </div>
+                <div class="resume-section glass-card">
+                    <h3 class="resume-section-title"><i class="fas fa-laptop-code"
+                            style="color: var(--primary); margin-right: 15px;"></i> Core Competencies</h3>
+
+                    <div class="skill-list">
+                        <div class="skill-bar-container">
+                            <div class="skill-meta"><span>Python / SQL / PySpark</span> <span>95%</span></div>
+                            <div class="skill-track">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-container">
+                            <div class="skill-meta"><span>Machine Learning & NLP</span> <span>90%</span></div>
+                            <div class="skill-track">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-container">
+                            <div class="skill-meta"><span>Data Analysis & Mining</span> <span>85%</span></div>
+                            <div class="skill-track">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-container">
+                            <div class="skill-meta"><span>RAG, AWS, LLMs, Gen AI & Agents</span> <span>85%</span></div>
+                            <div class="skill-track">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-bar-container">
+                            <div class="skill-meta"><span>Model Deployment & API (Django/AWS)</span> <span>80%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="text-muted">&copy; 2024 Ahmad Rafi. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+    </script>
+</body>
+
+</html>
