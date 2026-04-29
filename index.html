@@ -41,11 +41,14 @@
                 <span class="hero-greeting"><i class="fas fa-hand-sparkles" style="color: var(--primary)"></i> Hello,
                     Welcome!</span>
                 <h1 class="hero-title">I'm <span>Ahmad Rafi</span></h1>
-                <p class="hero-desc"><b>AI/ML Engineer</b> specializing in machine learning, generative AI, and building
-                    intelligent solutions to solve complex problems. Based in Al Ula, Al Madinah, Saudi Arabia.</p>
+                <p class="hero-desc"><b>AI/ML Engineer</b> with 4+ years of hands-on experience building and deploying
+                    production-grade machine learning systems, generative AI solutions, and end-to-end MLOps pipelines.
+                    Expertise spans LLMs, RAG architectures, AWS cloud infrastructure, and scalable API development
+                    driving measurable impact through data-driven innovation across healthcare, telecom, and enterprise
+                    domains. Based in Al Ula, Al Madinah, Saudi Arabia.</p>
 
                 <div class="hero-actions">
-                    <a href="" class="btn btn-primary" target="_blank" download>
+                    <a href="javascript:void(0)" class="btn btn-primary btn-disabled" onclick="return false;" style="opacity: 0.5; cursor: not-allowed;">
                         <i class="fas fa-download"></i> Download CV
                     </a>
                     <a href="mailto:ahdrafi1486@gmail.com" class="btn btn-outline">
@@ -225,86 +228,167 @@
                 <h2 class="section-title">Highlighted <span class="text-primary-gradient">Projects</span></h2>
             </div>
 
-            <div class="projects-grid">
-                <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-img-wrapper">
-                        <img src="assets/images/blog/M2VIZ.png" alt="M2Viz Project" class="project-img"
-                            onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=M2Viz'">
+            <div class="projects-pagination-wrapper">
+                <button class="pagination-btn pagination-prev" id="projectsPrev" aria-label="Previous projects">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Project 1: Telco Customer Churn Predictor -->
+                    <div class="project-card glass-card" data-project-index="0">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/blog/Telco customer churn predictor.png" alt="Telco Customer Churn Predictor"
+                                class="project-img"
+                                onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=Telco+Churn'">
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Telco Customer Churn Predictor</h4>
+                            <p class="project-desc">End-to-end MLOps pipeline for predicting telecom customer churn —
+                                XGBoost model served via FastAPI & Gradio, containerized with Docker, CI/CD via GitHub
+                                Actions, deployed on AWS ECS Fargate.</p>
+                            <div class="project-links-row">
+                                <a href="http://telco-churn-alb-1440271445.us-east-1.elb.amazonaws.com/ui/"
+                                    target="_blank" class="project-link">Live Demo <i
+                                        class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/ahd-rafi/telco-churn-mlops-pipeline.git" target="_blank"
+                                    class="project-link">GitHub <i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-content">
-                        <h4 class="project-title">M2Viz</h4>
-                        <p class="project-desc">An all-in-one web tool for creating high-quality lollipop plots of
-                            genomic and proteomic modifications.</p>
-                        <a href="https://ciods.in/m2viz" target="_blank" class="project-link">View Project <i
-                                class="fas fa-arrow-right"></i></a>
+                    <!-- Project 2: Diabetes Prediction -->
+                    <div class="project-card glass-card" data-project-index="1">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/blog/Diabetes Prediction.png" alt="Diabetes Prediction App"
+                                class="project-img"
+                                onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=Diabetes+Prediction'">
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Diabetes Prediction</h4>
+                            <p class="project-desc">Streamlit web app predicting diabetes risk using a
+                                hyperparameter-tuned XGBoost model trained on the Pima Indians dataset, with interactive
+                                visualizations and probability gauges.</p>
+                            <div class="project-links-row">
+                                <a href="https://sefwlt5oz4ds9hktukq5fa.streamlit.app/" target="_blank"
+                                    class="project-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/ahd-rafi/Diabetes-Prediction.git" target="_blank"
+                                    class="project-link">GitHub <i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3: Insurance Premium Prediction -->
+                    <div class="project-card glass-card" data-project-index="2">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/blog/insurance_premium.png" alt="Insurance Premium Prediction"
+                                class="project-img"
+                                onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=Insurance+Premium'">
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Insurance Premium Prediction</h4>
+                            <p class="project-desc">ML model estimating annual medical expenses for ACME Insurance Inc.
+                                using customer health data, with emphasis on explainability and regulatory transparency.
+                            </p>
+                            <a href="https://github.com/ahd-rafi/Insurance-Premium-Prediction.git" target="_blank"
+                                class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Project 4: Mushroom Classifier -->
+                    <div class="project-card glass-card" data-project-index="3">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/blog/mush.jpg" alt="MushroomClassifier" class="project-img"
+                                onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=Mushroom+Classifier'">
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Mushroom Classifier</h4>
+                            <p class="project-desc">EnsembleBoost classification of poisonous mushrooms with 0.98+
+                                accuracy
+                                using RandomForest and XGBoost.</p>
+                            <a href="https://github.com/ahd-rafi/Mushroom-Classifier-EnsembleBoost" target="_blank"
+                                class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Project 5: Rossmann Sales Forecasting -->
+                    <div class="project-card glass-card" data-project-index="4">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/blog/ross.jpg" alt="Rossmann Sales Forecasting" class="project-img"
+                                onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=Rossmann+Sales'">
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Rossmann Sales Forecasting</h4>
+                            <p class="project-desc">Enhanced forecasting accuracy by incorporating time series features
+                                and
+                                external data sources.</p>
+                            <a href="https://github.com/ahd-rafi/Rossman-Store-Sales-Prediction" target="_blank"
+                                class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Project 6: M2Viz -->
+                    <div class="project-card glass-card" data-project-index="5">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/blog/M2VIZ.png" alt="M2Viz Project" class="project-img"
+                                onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=M2Viz'">
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">M2Viz</h4>
+                            <p class="project-desc">An all-in-one web tool for creating high-quality lollipop plots of
+                                genomic and proteomic modifications.</p>
+                            <a href="https://ciods.in/m2viz" target="_blank" class="project-link">View Project <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Project 7: HNCDrugResDB -->
+                    <div class="project-card glass-card" data-project-index="6">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/blog/HNC.jpg" alt="HNCDrugResDB" class="project-img"
+                                onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=HNCDrugResDB'">
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">HNCDrugResDB</h4>
+                            <p class="project-desc">A comprehensive database analyzing drug resistance in head and neck
+                                cancer (HNC) treatments.</p>
+                            <a href="https://ciods.in/drug_resistant/browseinput" target="_blank"
+                                class="project-link">View
+                                Database <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Project 8: Data Exploration in SQL -->
+                    <div class="project-card glass-card" data-project-index="7">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/blog/covid.jpeg" alt="SQL Data Exploration" class="project-img"
+                                onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=SQL+Data+Exploration'">
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Data Exploration in SQL</h4>
+                            <p class="project-desc">Analysis of COVID-19 data using SQL to uncover insights on infection
+                                rates, mortality, and population impact.</p>
+                            <a href="https://github.com/ahd-rafi/COVID-19-Data-Exploration-and-Insights-SQL-"
+                                target="_blank" class="project-link">View on GitHub <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Project 9: Diabetes Analysis -->
+                    <div class="project-card glass-card" data-project-index="8">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/blog/tab.jpg" alt="Diabetes Analysis" class="project-img"
+                                onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=Diabetes+Analysis'">
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Diabetes Analysis</h4>
+                            <p class="project-desc">Comprehensive Diabetes Analysis and Insights Using Tableau:
+                                Unveiling
+                                Patterns and Trends.</p>
+                            <a href="https://public.tableau.com/app/profile/ahmad.rafi6904/viz/DiabetesAnalysisandSuggestions_17276947074160/DiabetesAnalysisandSuggestions?publish=yes"
+                                target="_blank" class="project-link">View Dashboard <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-img-wrapper">
-                        <img src="assets/images/blog/tab.jpg" alt="Diabetes Analysis" class="project-img"
-                            onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=Diabetes+Analysis'">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Diabetes Analysis</h4>
-                        <p class="project-desc">Comprehensive Diabetes Analysis and Insights Using Tableau: Unveiling
-                            Patterns and Trends.</p>
-                        <a href="https://public.tableau.com/app/profile/ahmad.rafi6904/viz/DiabetesAnalysisandSuggestions_17276947074160/DiabetesAnalysisandSuggestions?publish=yes"
-                            target="_blank" class="project-link">View Dashboard <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-img-wrapper">
-                        <img src="assets/images/blog/covid.jpeg" alt="SQL Data Exploration" class="project-img"
-                            onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=SQL+Data+Exploration'">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Data Exploration in SQL</h4>
-                        <p class="project-desc">Analysis of COVID-19 data using SQL to uncover insights on infection
-                            rates, mortality, and population impact.</p>
-                        <a href="https://github.com/ahd-rafi/COVID-19-Data-Exploration-and-Insights-SQL-"
-                            target="_blank" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-img-wrapper">
-                        <img src="assets/images/blog/HNC.jpg" alt="HNCDrugResDB" class="project-img"
-                            onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=HNCDrugResDB'">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">HNCDrugResDB</h4>
-                        <p class="project-desc">A comprehensive database analyzing drug resistance in head and neck
-                            cancer (HNC) treatments.</p>
-                        <a href="https://ciods.in/drug_resistant/browseinput" target="_blank" class="project-link">View
-                            Database <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-img-wrapper">
-                        <img src="assets/images/blog/mush.jpg" alt="MushroomClassifier" class="project-img"
-                            onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=Mushroom+Classifier'">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">MushroomClassifier</h4>
-                        <p class="project-desc">EnsembleBoost classification of poisonous mushrooms with 0.98+ accuracy
-                            using RandomForest and XGBoost.</p>
-                        <a href="https://github.com/ahd-rafi/Mushroom-Classifier-EnsembleBoost" target="_blank"
-                            class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="project-img-wrapper">
-                        <img src="assets/images/blog/ross.jpg" alt="Rossmann Sales Forecasting" class="project-img"
-                            onerror="this.src='https://placehold.co/600x400/1e2125/a0a8b1?text=Rossmann+Sales'">
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title">Rossmann Sales Forecasting</h4>
-                        <p class="project-desc">Enhanced forecasting accuracy by incorporating time series features and
-                            external data sources.</p>
-                        <a href="https://github.com/ahd-rafi/Rossman-Store-Sales-Prediction" target="_blank"
-                            class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+
+                <button class="pagination-btn pagination-next" id="projectsNext" aria-label="Next projects">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
+
+            <div class="pagination-dots" id="paginationDots"></div>
         </div>
     </section>
     <section id="certifications" class="section" style="background: rgba(15, 17, 21, 0.4);">
@@ -661,6 +745,67 @@
                 }
             });
         });
+
+        // Projects Pagination
+        (function () {
+            const grid = document.getElementById('projectsGrid');
+            const prevBtn = document.getElementById('projectsPrev');
+            const nextBtn = document.getElementById('projectsNext');
+            const dotsContainer = document.getElementById('paginationDots');
+            const allCards = Array.from(grid.querySelectorAll('.project-card'));
+            const perPage = 6;
+            const totalPages = Math.ceil(allCards.length / perPage);
+            let currentPage = 0;
+
+            // Create dots
+            for (let i = 0; i < totalPages; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('pagination-dot');
+                dot.setAttribute('aria-label', 'Go to page ' + (i + 1));
+                dot.addEventListener('click', () => goToPage(i));
+                dotsContainer.appendChild(dot);
+            }
+
+            function goToPage(page) {
+                currentPage = page;
+                allCards.forEach((card, idx) => {
+                    const start = currentPage * perPage;
+                    const end = start + perPage;
+                    if (idx >= start && idx < end) {
+                        card.style.display = '';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, (idx - start) * 80);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Update dots
+                dotsContainer.querySelectorAll('.pagination-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentPage);
+                });
+
+                // Update button states
+                prevBtn.classList.toggle('disabled', currentPage === 0);
+                nextBtn.classList.toggle('disabled', currentPage === totalPages - 1);
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentPage > 0) goToPage(currentPage - 1);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentPage < totalPages - 1) goToPage(currentPage + 1);
+            });
+
+            // Initialize
+            goToPage(0);
+        })();
     </script>
 </body>
 
